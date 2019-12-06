@@ -208,7 +208,7 @@ class FS(abc.ABC):
         pass
 
     @abc.abstractmethod
-    def unmount(mountPoint: str) -> bool:
+    def unmount(self, mountPoint: str) -> bool:
         """
         Deletes a DBFS mount point. Once this method returns, the mount point metadata is
             guaranteed to be deleted from persistent storage and should be inaccessible from every
@@ -223,21 +223,3 @@ class FS(abc.ABC):
         :return True if the mount point was successfully unmounted, or wasn't mounted originally.
         """
         pass
-
-
-'''
-%python
-dbutils.fs.help("cp")
-dbutils.fs.help("head")
-dbutils.fs.help("ls")
-dbutils.fs.help("mkdirs")
-dbutils.fs.help("mv")
-dbutils.fs.help("put")
-dbutils.fs.help("rm")
-dbutils.fs.help("mount")
-dbutils.fs.help("refreshMounts")
-dbutils.fs.help("unmount")
-dbutils.fs.help("")
-dbutils.fs.help("")
-dbutils.fs.help("")
-'''
