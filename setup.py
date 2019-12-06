@@ -8,6 +8,7 @@ setup(
         license='MIT',
         author='cdeler',
         author_email='serj.krotov@gmail.com',
-        description='Provides type hints for dbutils in Data Bricks: ' \
-                    'https://docs.databricks.com/dev-tools/databricks-utils.html'
+        description='Provides type hints for dbutils in Data Bricks: '
+                    'https://docs.databricks.com/dev-tools/databricks-utils.html',
+        python_requires='>=3.5',
 )
