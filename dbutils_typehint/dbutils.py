@@ -1,5 +1,5 @@
 from dbutils_typehint.fs import FS
 
 
-class DbUtils:
+class DBUtils:
     fs = None  # type: FS
