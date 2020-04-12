@@ -2,19 +2,7 @@ import abc
 from typing import Optional, Dict, Iterable
 
 
-class FileInfo(abc.ABC):
-    @abc.abstractmethod
-    def name(self) -> str:
-        pass
-
-    @abc.abstractmethod
-    def length(self) -> int:
-        pass
-
-    @abc.abstractmethod
-    def path(self) -> str:
-        pass
-
+class FileInfo(namedtuple('FileInfo', ['path', 'name', 'size'])):
     @abc.abstractmethod
     def isDir(self) -> bool:
         pass
