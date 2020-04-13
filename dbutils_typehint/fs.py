@@ -3,14 +3,17 @@ from typing import Optional, Dict, Iterable
 
 
 class FileInfo(abc.ABC):
+    @property
     @abc.abstractmethod
     def name(self) -> str:
         pass
 
+    @property
     @abc.abstractmethod
     def length(self) -> int:
         pass
 
+    @property
     @abc.abstractmethod
     def path(self) -> str:
         pass
