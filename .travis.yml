@@ -1,0 +1,8 @@
+deploy:
+  provider: pypi
+  user: __token__
+  password:
+    secure: zIZtJXRfP3QoR7MwsR+XB/c52whMooG+87puFi34swbSPlW+9fa/NI5LEPdPvhQc9yUc2qP9hT+gUz/kGPI+QKcjr5bIR6zcIMt1WBpyf+zwaaFxjIg6Wykp9Obkn4xZhzhD36L2t6IwA6OisTtbImADo+zGOWgii102ODag02JQuhNxYupfcl4NWUIo804CLy5wwThxvKpuVBK1E+G1fQZERmRSScNM/2IoXW+5VMl1fZt6KkCN7yzWgy544TA+OeWT33JiaeFoVvAuksRCfRnLdLqVvL6RSeymGHkerlS08ZFYwLjq2f55Mzu8e7aziLayHUVN16YO9MYpMToJH9wPDn9TXvM1fFvH3sup4+3L1cpp6O3lEYEUtQUZ+64VqvooUXv9ZhLahoDDfd5hUXHzF2QuPjZUzfr+g2eqgj4vcwfY+WPpDa5hG8dClixMJJGZUvJi2XJkR6aAfIR3il5B8OwxJp4eo2PTPTqr1TxIoUgj43jUQWnFLZNBz//6QdK/5c7qJre1+Hood4big2iH0ylXohC4SARKfQadBgwC0KNpTehLCbrJfupU9Cah5cn+s5tB7Qt6VL9Blb+p3b3DCCEyrAquFbWSh5WzKJt6lM/lMYpBS0gLeVDgK29+QfsDvK/CLVRDiX0SpyQvHDoUmmY/LbyzMv+OG+UY5jA=
+  distributions: "sdist bdist_wheel"
+  true:
+    branch: master
