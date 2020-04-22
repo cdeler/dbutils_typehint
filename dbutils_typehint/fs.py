@@ -1,8 +1,7 @@
-import abc
-from typing import Optional, Dict, Iterable
+from typing import Dict, Iterable, Optional
 
 
-class FileInfo(abc.ABC):
+class FileInfo:
     @property
     def name(self) -> str:
         pass
@@ -22,7 +21,7 @@ class FileInfo(abc.ABC):
         pass
 
 
-class FS(abc.ABC):
+class FS:
     """
     dbutils.fs provides utilities for working with FileSystems.
     Most methods in this package can take either a DBFS path (e.g., "/foo" or "dbfs:/foo"),
