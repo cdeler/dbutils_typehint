@@ -1,4 +1,10 @@
 language: python
+python:
+  - "3.5"
+install:
+  - echo "Skip installation stage"
+script:
+  - python3 setup.py sdist bdist_wheel
 deploy:
   provider: pypi
   user: __token__
