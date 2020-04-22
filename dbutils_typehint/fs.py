@@ -4,25 +4,20 @@ from typing import Optional, Dict, Iterable
 
 class FileInfo(abc.ABC):
     @property
-    @abc.abstractmethod
     def name(self) -> str:
         pass
 
     @property
-    @abc.abstractmethod
     def length(self) -> int:
         pass
 
     @property
-    @abc.abstractmethod
     def path(self) -> str:
         pass
 
-    @abc.abstractmethod
     def isDir(self) -> bool:
         pass
 
-    @abc.abstractmethod
     def isFile(self) -> bool:
         pass
 
@@ -34,7 +29,6 @@ class FS(abc.ABC):
         or another FileSystem URI. For more info about a method, use dbutils.fs.help("methodName").
     """
 
-    @abc.abstractmethod
     def cp(self, _from: str, to: str, recurse: bool = False) -> bool:
         """
         Copies a file or directory, possibly across FileSystems..
@@ -48,7 +42,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def head(self, file: str, max_bytes: int = 65536) -> str:
         """
         Returns up to the first 'max_bytes' bytes of the given file as a String encoded in UTF-8.
@@ -61,7 +54,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def ls(self, dirname: str) -> Iterable[FileInfo]:
         """
         Lists the contents of a directory.
@@ -76,7 +68,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def mkdirs(self, dirname: str) -> bool:
         """
         Creates the given directory if it does not exist, also creating any necessary parent
@@ -88,7 +79,6 @@ class FS(abc.ABC):
         :return True if the directory was successfully created
         """
 
-    @abc.abstractmethod
     def mv(self, _from: str, to: str, recurse: bool = False) -> bool:
         """
         Moves a file or directory, possibly across FileSystems.
@@ -103,7 +93,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def put(self, file: str, contents: str, overwrite: bool = False) -> bool:
         """
         Writes the given String out to a file, encoded in UTF-8.
@@ -119,7 +108,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def rm(self, dir_name: str, recurse: bool = False) -> bool:
         """
         Removes a file or directory.
@@ -132,7 +120,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def mount(self,
               source: str,
               mount_point: str,
@@ -186,7 +173,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def mounts(self) -> Iterable:
         """
         Displays information about what is mounted within DBFS. The returned information includes
@@ -195,7 +181,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def refreshMounts(self) -> bool:
         """
         Forces all machines in this cluster to refresh their mount cache, ensuring they receive
@@ -210,7 +195,6 @@ class FS(abc.ABC):
         """
         pass
 
-    @abc.abstractmethod
     def unmount(self, mountPoint: str) -> bool:
         """
         Deletes a DBFS mount point. Once this method returns, the mount point metadata is

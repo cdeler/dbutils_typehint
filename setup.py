@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
         name='dbutils_typehint',
-        version='0.1.3',
+        version='0.1.4',
         packages=['dbutils_typehint'],
         url='https://github.com/cdeler/dbutils_typehint',
         license='MIT',
