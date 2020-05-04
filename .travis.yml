@@ -4,7 +4,7 @@ python:
 install:
   - echo "Skip installation stage"
 script:
-  - python3 setup.py sdist bdist_wheel
+  - echo "Skip script stage"
 deploy:
   provider: pypi
   user: __token__
