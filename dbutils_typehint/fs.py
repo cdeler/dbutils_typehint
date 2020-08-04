@@ -1,24 +1,20 @@
 from typing import Dict, Iterable, Optional
 
+from dataclasses import dataclass
 
+
+@dataclass
 class FileInfo:
-    @property
-    def name(self) -> str:
-        pass
-
-    @property
-    def length(self) -> int:
-        pass
-
-    @property
-    def path(self) -> str:
-        pass
+    name: str
+    length: int
+    path: str
+    dir: bool
 
     def isDir(self) -> bool:
-        pass
+        return self.dir
 
     def isFile(self) -> bool:
-        pass
+        return not self.dir
 
 
 class FS:
