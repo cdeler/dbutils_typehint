@@ -1,21 +1,15 @@
+from collections import namedtuple
 from typing import Dict, Iterable, Optional
 
 from dataclasses import dataclass
 
 
-@dataclass
-class FileInfo:
-    name: str
-    length: int
-    path: str
-    dir: bool
+class FileInfo(namedtuple('FileInfo', ['path', 'name', 'size', "modificationTime"])):
+    def isDir(self): ...
+    def isFile(self): ...
 
-    def isDir(self) -> bool:
-        return self.dir
-
-    def isFile(self) -> bool:
-        return not self.dir
-
+class MountInfo(namedtuple('MountInfo', ['mountPoint', 'source', 'encryptionType'])):
+    pass
 
 class FS:
     """
@@ -205,3 +199,17 @@ class FS:
         :return True if the mount point was successfully unmounted, or wasn't mounted originally.
         """
         pass
+
+
+    def help(self, method_name=None): ...
+
+    # cache functions
+
+    def cacheFiles(self, *files): ...
+    def cacheTable(self, name): ...
+    def uncacheFiles(self, *files): ...
+    def uncacheTable(self, name): ...
+
+    # mount functions
+
+    def updateMount(self, source, mount_point, encryption_type="", owner=None, extra_configs={}): ...

@@ -1,20 +1,11 @@
 from typing import List
+from collections import namedtuple
 
+class SecretScope(namedtuple('SecretScope', ['name'])):
+    def getName(self): ...
 
-class SecretScope:
-    @property
-    def name(self) -> str:
-        pass
-
-    def getName(self) -> str:
-        pass
-
-
-class SecretMetadata:
-    @property
-    def key(self) -> str:
-        pass
-
+class SecretMetadata(namedtuple('SecretMetadata', ['key'])):
+    pass
 
 class Secrets:
     """
@@ -57,3 +48,5 @@ class Secrets:
         :return: a list with all available secret scopes
         """
         pass
+
+    def help(self, method_name: str = None) -> None: ...
