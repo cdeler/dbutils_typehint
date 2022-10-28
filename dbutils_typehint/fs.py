@@ -1,7 +1,5 @@
 from typing import Dict, Iterable, Optional
-
 from dataclasses import dataclass
-
 
 @dataclass
 class FileInfo:
@@ -16,6 +14,11 @@ class FileInfo:
     def isFile(self) -> bool:
         return not self.dir
 
+@dataclass
+class MountInfo:
+    mountPoint: str
+    source: str
+    encryptionType: str
 
 class FS:
     """
@@ -204,4 +207,10 @@ class FS:
         :param mountPoint: DBFS directory previously mounted
         :return True if the mount point was successfully unmounted, or wasn't mounted originally.
         """
+        pass
+
+    def updateMount(self, source, mount_point, encryption_type="", owner=None, extra_configs={}):
+        pass
+
+    def help(self, method_name=None):
         pass

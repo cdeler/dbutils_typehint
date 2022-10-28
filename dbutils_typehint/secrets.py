@@ -1,6 +1,5 @@
 from typing import List
 
-
 class SecretScope:
     @property
     def name(self) -> str:
@@ -14,7 +13,6 @@ class SecretMetadata:
     @property
     def key(self) -> str:
         pass
-
 
 class Secrets:
     """
@@ -56,4 +54,7 @@ class Secrets:
 
         :return: a list with all available secret scopes
         """
+        pass
+
+    def help(self, method_name: str = None) -> None:
         pass
