@@ -4,9 +4,18 @@ from typing import Dict, Iterable, Optional
 from dataclasses import dataclass
 
 
-class FileInfo(namedtuple('FileInfo', ['path', 'name', 'size', "modificationTime"])):
-    def isDir(self): ...
-    def isFile(self): ...
+@dataclass
+class FileInfo:
+    name: str
+    length: int
+    path: str
+    dir: bool
+
+    def isDir(self) -> bool:
+        return self.dir
+
+    def isFile(self) -> bool:
+        return not self.dir
 
 class MountInfo(namedtuple('MountInfo', ['mountPoint', 'source', 'encryptionType'])):
     pass

@@ -1,11 +1,19 @@
 from typing import List
 from collections import namedtuple
 
-class SecretScope(namedtuple('SecretScope', ['name'])):
-    def getName(self): ...
+class SecretScope:
+    @property
+    def name(self) -> str:
+        pass
 
-class SecretMetadata(namedtuple('SecretMetadata', ['key'])):
-    pass
+    def getName(self) -> str:
+        pass
+
+
+class SecretMetadata:
+    @property
+    def key(self) -> str:
+        pass
 
 class Secrets:
     """
