@@ -1,4 +1,3 @@
-from collections import namedtuple
 import dbutils_typehint.fs as fs
 import dbutils_typehint.secrets as secrets
 
