@@ -1,8 +1,5 @@
-from collections import namedtuple
 from typing import Dict, Iterable, Optional
-
 from dataclasses import dataclass
-
 
 @dataclass
 class FileInfo:
@@ -17,8 +14,11 @@ class FileInfo:
     def isFile(self) -> bool:
         return not self.dir
 
-class MountInfo(namedtuple('MountInfo', ['mountPoint', 'source', 'encryptionType'])):
-    pass
+@dataclass
+class MountInfo:
+    mountPoint: str
+    source: str
+    encryptionType: str
 
 class FS:
     """
@@ -209,6 +209,8 @@ class FS:
         """
         pass
 
-    def updateMount(self, source, mount_point, encryption_type="", owner=None, extra_configs={}): ...
+    def updateMount(self, source, mount_point, encryption_type="", owner=None, extra_configs={}):
+        pass
 
-    def help(self, method_name=None): ...
+    def help(self, method_name=None):
+        pass

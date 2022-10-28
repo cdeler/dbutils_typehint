@@ -6,46 +6,74 @@ class NotebookExit(Exception):
     """Raised by dbutils.notebook.exit() to return a value from Notebook execution."""
 
 class JobsHandler:
-    def help(self, method_name=""): ...
+    def help(self, method_name=""):
+        pass
 
 class TaskValuesHandler:
-    def get(self, taskKey, key, default=None, debugValue=None): ...
-    def set(self, key, value): ...
-    def help(self, method_name=""): ...
+    def get(self, taskKey, key, default=None, debugValue=None):
+        pass
+    def set(self, key, value):
+        pass
+    def help(self, method_name=""):
+        pass
 
 class NotebookHandler:
-    def help(self, method_name=""): ...
-    def exit(self, value):  ...
-    def run(self, path, timeout_seconds, arguments={}, __databricks_internal_cluster_spec=None): ...
+    def help(self, method_name=""):
+        pass
+    def exit(self, value): 
+        pass
+    def run(self, path, timeout_seconds, arguments={}, __databricks_internal_cluster_spec=None):
+        pass
 
 class WidgetsHandlerImpl:
-    def help(self, method_name=""): ...
-    def get(self, name): ...
-    def getArgument(self, name, defaultValue=None): ...
-    def text(self, name, defaultValue, label=None): ...
-    def dropdown(self, name, defaultValue, choices, label=None): ...
-    def combobox(self, name, defaultValue, choices, label=None): ...
-    def multiselect(self, name, defaultValue, choices, label=None): ...
-    def remove(self, name): ...
-    def removeAll(self): ...
+    def help(self, method_name=""):
+        pass
+    def get(self, name):
+        pass
+    def getArgument(self, name, defaultValue=None):
+        pass
+    def text(self, name, defaultValue, label=None):
+        pass
+    def dropdown(self, name, defaultValue, choices, label=None):
+        pass
+    def combobox(self, name, defaultValue, choices, label=None):
+        pass
+    def multiselect(self, name, defaultValue, choices, label=None):
+        pass
+    def remove(self, name):
+        pass
+    def removeAll(self):
+        pass
 
 class CredentialsHandler:
-    def help(self, method_name=None): ...
-    def assumeRole(self, role): ...
-    def showCurrentRole(self): ...
-    def showRoles(self): ...
-    def getCurrentCredentials(self): ...
+    def help(self, method_name=None):
+        pass
+    def assumeRole(self, role):
+        pass
+    def showCurrentRole(self):
+        pass
+    def showRoles(self):
+        pass
+    def getCurrentCredentials(self):
+        pass
 
 class LibraryHandler:
-    def help(self, method_name=None): ...
-    def install(self, path): ...
-    def installPyPI(self, project, version="", repo="", extras=""): ...
-    def restartPython(self): ...
-    def list(self): ...
+    def help(self, method_name=None):
+        pass
+    def install(self, path):
+        pass
+    def installPyPI(self, project, version="", repo="", extras=""):
+        pass
+    def restartPython(self):
+        pass
+    def list(self):
+        pass
 
 class DataHandler:
-    def help(self, method_name=None): ...
-    def summarize(self, df, precise=False): ...
+    def help(self, method_name=None):
+        pass
+    def summarize(self, df, precise=False):
+        pass
 
 
 class DBUtils:
@@ -59,23 +87,33 @@ class DBUtils:
     """
 
     @property
-    def shell(self): ...
+    def shell(self):
+        pass
 
     @property
-    def fs(self) -> fs.FS: ...
+    def fs(self) -> fs.FS:
+        pass
     @property
-    def jobs(self) -> JobsHandler: ...
+    def jobs(self) -> JobsHandler:
+        pass
     @property
-    def notebook(self) -> NotebookHandler: ...
+    def notebook(self) -> NotebookHandler:
+        pass
     @property
-    def secrets(self) -> secrets.Secrets: ...
+    def secrets(self) -> secrets.Secrets:
+        pass
     @property
-    def widgets(self) -> WidgetsHandlerImpl: ...
+    def widgets(self) -> WidgetsHandlerImpl:
+        pass
     @property
-    def library(self) -> LibraryHandler: ...
+    def library(self) -> LibraryHandler:
+        pass
     @property
-    def credentials(self) -> CredentialsHandler: ...
+    def credentials(self) -> CredentialsHandler:
+        pass
     @property
-    def data(self) -> DataHandler: ...
+    def data(self) -> DataHandler:
+        pass
 
-    def help(self, method_name=""): ...
+    def help(self, method_name=""):
+        pass

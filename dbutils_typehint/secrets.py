@@ -1,5 +1,4 @@
 from typing import List
-from collections import namedtuple
 
 class SecretScope:
     @property
@@ -57,4 +56,5 @@ class Secrets:
         """
         pass
 
-    def help(self, method_name: str = None) -> None: ...
+    def help(self, method_name: str = None) -> None:
+        pass
