@@ -1,4 +1,4 @@
-from typing import Dict, Iterable, Optional
+from typing import Dict, Iterable, Optional, Sequence
 
 from dataclasses import dataclass
 
@@ -49,7 +49,7 @@ class FS:
         """
         pass
 
-    def ls(self, dirname: str) -> Iterable[FileInfo]:
+    def ls(self, dirname: str) -> Sequence[FileInfo]:
         """
         Lists the contents of a directory.
 
